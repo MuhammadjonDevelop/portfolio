@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" id="theme" href="send.css">
+    <link rel="icon" href="./img/1200px-Keen_Bild_Taxon.svg.png">
+    <title>Send Question</title>
+</head>
+<body>
+    <section>
+        <a href="#" class="logo">Portfo<span>lio</span></a>
+        <div class="toggle"></div>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./aboutme.html">About me</a></li>
+            <li><a href="./send.html">Send Question</a></li>
+            <!-- <li><i style="border: 1px solid red; color: white;" id="icon" class="bi bi-brightness-high"></i></li> -->
+            <input type="checkbox" name="" id="ch">
+        </ul>
+    </section>
+    <div class="bir">
+        <div class="qism1">
+            <div class="df" style="margin: 30px 0 0 50px;">
+                <div>
+                    <a href="https://goo.gl/maps/gPUUq3hm28dvjccQ9"><i class="bi bi-geo-alt"></i></a>
+                </div>
+                <div class="p1">
+                    <h4>Location:</h4>
+                    <p>Jizzax shahri Xayrobod Mahallasi Xirmontepa ko'chasi 11 uy</p>
+                </div>
+            </div>
+            <div class="df" style="margin: 0 0 0 50px;">
+                <div>
+                    <i class="bi bi-envelope"></i>
+                </div>
+                <div class="p2">
+                    <h4>Email:</h4>
+                    <p>imuhammadjon@gmail.com</p>
+                </div>
+            </div>
+            <div class="df" style="margin: 0 0 50px 50px;">
+                <div>
+                    <a href="https://t.me/ilhomovmuhammadjon" target="_blank"><i class="bi bi-phone"></i></a>
+                </div>
+                <div class="p3">
+                    <h4>Call</h4>
+                    <p>+998 97 295 5225</p>
+                </div>
+            </div> 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d420.18173924307075!2d67.83132915213152!3d40.09688825512155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1suz!2s!4v1661795462273!5m2!1suz!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="qism2">
+            <form action="" id="form">
+                <div class="df">
+                
+                    <div class="input1">
+                        <p class="s1">Your Name</p>
+                        <input type="text" name="" id="inp1">
+                    </div>
+                    <div class="input2">
+                        <p class="s2">Your Email</p>
+                        <input type="text" name="" id="inp2">
+                    </div>
+                </div>
+                <div>
+                    <div class="sub">
+                        <p class="s3">Subject</p>
+                        <input type="text" id="inp3">
+                    </div>
+                    <div class="mes">
+                        <p class="s4">Message</p>
+                        <textarea name="" id="inp4" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="container">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        window.addEventListener("scroll" , function() {
+            let header = document.querySelector("section")
+            header.classList.toggle("sticky" , window.scrollY > 0)
+        })
+        
+        let form =  document.getElementById('form')
+        form.addEventListener('submit',  e => {
+            e.preventDefault();
+            let inp1 = document.getElementById('inp1')
+            let inp2 = document.getElementById('inp2')
+            let inp3 = document.getElementById('inp3')
+            let inp4 = document.getElementById('inp4')
+            fetch(`https://api.telegram.org/bot5640356633:AAEbyQ0brt-QRc6NNC_QjwJLmLtAWG0vS6M/sendMessage?chat_id=-1001734137316&text=name ${inp1.value} surname ${inp2.value} subject ${inp3.value} message ${inp4.value}` , {
+                method: 'GET'
+            })
+            .then( success => {
+                alert('Message succesfully')
+            }, error => {
+                alert("error")
+            })
+        })
+        let check = document.getElementById("ch")
+        check.onclick = function() {
+            let theme = document.getElementById('theme')
+            if (theme.getAttribute('href') == 'send.css') {
+                theme.href = 'sendqora.css';
+            }else {
+                theme.href = 'send.css';
+            }
+        }
+    </script>
+</body>
+</html>

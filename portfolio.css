@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.3s;
+}
+.scrollbtn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.scrollbtn i {
+    color: #fff;
+}
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	0% {
+		background-position: 400% 0;
+	}
+}
+html::-webkit-scrollbar{
+    width: 10px;
+}
+
+html::-webkit-scrollbar-track{
+    background:rgb(0, 0, 0);
+}
+
+html::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background: linear-gradient(to top , #008aff, #00ffe7);
+}
+#vedio {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    filter: blur(15px);
+}
+.blak {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.8;
+}
+@media (min-aspect-ratio: 16/9) {
+    #vedio {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #vedio {
+        width: auto;
+        height: 100%;
+    }
+}
+.container {
+    width: 1090px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.blok {
+    display: flex;
+    margin: 157px 0 0 0 ;
+    background: #181818;
+    width: 1080px;
+    padding: 0 30px 0 30px;
+    height: 280px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -8px 10px 47px 5px #181818;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.img img {
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.text {
+    margin: 0 0 0 30px;
+}
+.blok2 {
+    display: flex;
+    margin: 50px 0 0 0 ;
+    background: #181818;
+    width: 1080px;
+    padding: 0 30px 0 30px;
+    height: 280px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -8px 10px 47px 5px #181818;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.p1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+}
+.p2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: rgb(161, 161, 161);
+}
+.p3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+}
+.p4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: rgb(161, 161, 161);
+}
+.p5{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+}
+.p6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: rgb(161, 161, 161);
+}
+.p7{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+}
+.p8 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: rgb(161, 161, 161);
+}
+.p9{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+}
+.p10 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: rgb(161, 161, 161);
+}
+.text {
+    margin: 0 0 0 30px;
+}
+.blok3 {
+    display: flex;
+    margin: 50px 0 50px 0 ;
+    background: #181818;
+    width: 1080px;
+    padding: 0 30px 0 30px;
+    height: 280px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -8px 10px 47px 5px #181818;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.blok4 {
+    display: flex;
+    margin: 0px 0 00px 0 ;
+    background: #181818;
+    width: 1080px;
+    padding: 0 30px 0 30px;
+    height: 280px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -8px 10px 47px 5px #181818;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+.sticky {
+    padding: 20px 100px;
+    background: #fff;
+}
+.sticky ul li a {
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+}
+.sticky .logo {
+    color: #000;
+}
+section .logo {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+section .logo span {
+    color: #2196f3;
+}
+section ul {
+    position: relative;
+    display: flex;
+}
+section ul li {
+    position: relative;
+    list-style: none;
+}
+section ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+}
+section ul li a:after {
+    content: "";
+    position: absolute;
+    background-color: #2196f3;
+    height: 4px;
+    width: 0;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+section ul li a:hover:after {
+    width: 100%;
+}
+section input {
+    position: relative;
+    width: 60px;
+    height: 25px;
+    -webkit-appearance: none;
+    background: #c6c6c6;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+section input:checked {
+    background: #03a9f4;
+}
+section input::before {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    background: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+section input:checked::before {
+    left: 37px;
+}
+footer #hearth {
+    position: relative;
+    width: 80px;
+    height: 70px;
+}
+#hearth::before,
+#hearth::after {
+    position: absolute;
+    content: "";
+    left: 40px;
+    top: 0;
+    width: 40px;
+    height: 70px;
+    background: red;
+    border-radius: 50px 50px 0 0 ;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+#hearth::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+footer p {
+    font-size: 24px;
+    margin: 0 30px 0 00px;
+    color: white;
+}
+hr {
+    background: white;
+    border: 1px solid white;
+}
+footer {
+    margin: auto;
+    width: 100%;
+    background: #181818;
+    box-shadow: -8px 10px 47px 5px #181818;
+    height: 100px;
+}
