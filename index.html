@@ -7,7 +7,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css"> -->
-    <link rel="stylesheet" id="theme" href="style.css">
+    <link rel="stylesheet" id="bosh" href="style.css">
     <title>Asosiy sahifa</title>
 </head>
 <body>
@@ -22,7 +22,11 @@
             <li><a href="./aboutme.html">About me</a></li>
             <li><a href="./send.html">Send Question</a></li>
             <!-- <li><i style="border: 1px solid red; color: white;" id="icon" class="bi bi-brightness-high"></i></li> -->
-            <input type="checkbox" name="" id="ch">
+            <label for="theme" class="theme">
+                <span class="theme__toggle-wrap">
+                    <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark" style="margin: -4px 0 0 0;">
+                </span>
+            </label>
         </ul>
     </section>
     
@@ -110,9 +114,9 @@
             let header = document.querySelector("section")
             header.classList.toggle("sticky" , window.scrollY > 0)
         })
-        let check = document.getElementById("ch")
+        let check = document.querySelector(".theme__toggle")
         check.onclick = function() {
-            let theme = document.getElementById('theme')
+            let theme = document.getElementById('bosh')
             if (theme.getAttribute('href') == 'style.css') {
                 theme.href = 'qora.css';
             }else {
