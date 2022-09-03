@@ -128,6 +128,7 @@ section .logo span {
 section ul {
     position: relative;
     display: flex;
+    left: 10%;
 }
 section ul li {
     position: relative;
@@ -317,6 +318,11 @@ section ul li a:hover:after {
 .theme__toggle:checked ~ .theme__icon .theme__icon-part:nth-child(9) {
 	transform: rotate(360deg) translateY(0.8em);
 }
+.theme__toggle-wrap {
+    position: relative;
+    width: 100px;
+    left: 20%;
+}
 .w50 {
     min-width: 50%;
 }
@@ -383,4 +389,156 @@ section ul li a:hover:after {
 .services .content .servicesBx h2 {
     font-size: 24px;
     font-weight: 600;
+}
+
+
+@media (max-width: 991px) {
+    section,
+    .sticky {
+        padding: 20px 50px;
+        z-index: 1000;
+    }
+    .menu {
+        position: fixed;
+        top: 72px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        transition: 0.5s;
+        z-index: 999;
+    }
+    .menus {
+        left: 0;
+    }
+    section ul li a {
+        position: relative;
+        display: inline-block;
+        margin: 0 15px;
+        color: #000;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 24px;
+        margin: 10px 0 0 0;
+        font-weight: 600;
+    }
+    .logo {
+        margin: -5px 0 0 0;
+    } 
+    .sticky ul li a {
+        position: relative;
+        display: inline-block;
+        margin: 0 15px;
+        color: #000;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 24px;
+        margin: 10px 0 0 0;
+        font-weight: 600;
+    }
+    .theme__toggle-wrap {
+        left: -4%;
+    }
+    .toggle{
+        width: 40px;
+        height: 40px;
+        background-image: url('./img/menu.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+    .active {
+        width: 40px;
+        height: 40px;
+        background-image: url('./img/close.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+    }
+    .sticky .toggle{
+        filter: invert(1);
+    }
+    .sticky .active{
+        filter: invert(1);
+    }
+    header {
+        padding: 100px 50px;
+    }
+    .banner {
+        padding: 150px 50px 100px;
+    }
+    .banner h2 {
+        font-size: 1.5em;
+    }
+    .banner h3 {
+        font-size: 1em;
+    }
+    .btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+    .headings h2 {
+        font-size: 24px;
+    }
+    .contentBx  h3 {
+        font-size: 20px;
+    }
+    .contentBx p {
+        font-size: 15px;
+    }
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .content img {
+        margin: 30px 0 0 0;
+    }
+}
+@media (max-width: 1115px) {
+    section ul li a {
+        font-size: 18px;
+    }
+    section ul {
+        left: 10%;
+    }
+    .theme__toggle-wrap input{
+        height: 30px;
+        width: 60px;
+    }
+    .theme__toggle::before {
+        width: 26px;
+        height: 26px;
+        top: -1px;
+        left: -1px;
+        position: relative;
+    }
+    .theme__toggle:checked:before {
+        background-color: hsl(198,90%,55%);
+        left: -11px;
+    }
+}
+@media (max-width: 1030px) {
+    section ul li a {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    section ul {
+        left: 10%;
+    }
+    header {
+        padding: 100px 50px;
+    }
+    .banner {
+        padding: 150px 50px 100px;
+    }
+    section,
+    .sticky{
+        padding: 20px 50px;
+    }
 }
