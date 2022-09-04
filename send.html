@@ -59,21 +59,21 @@
                 
                     <div class="input1">
                         <p class="s1">Your Name</p>
-                        <input type="text" name="" id="inp1">
+                        <input type="text" name="" id="inp1" class="typed">
                     </div>
                     <div class="input2">
                         <p class="s2">Your Email</p>
-                        <input type="text" name="" id="inp2">
+                        <input type="text" name="" id="inp2" class="e2">
                     </div>
                 </div>
                 <div>
                     <div class="sub">
                         <p class="s3">Subject</p>
-                        <input type="text" id="inp3">
+                        <input type="text" id="inp3" class="g1">
                     </div>
                     <div class="mes">
                         <p class="s4">Message</p>
-                        <textarea name="" id="inp4" cols="30" rows="10"></textarea>
+                        <textarea name="" id="inp4" cols="30" rows="10" class='m2'></textarea>
                     </div>
                     <div class="container">
                         <button type="submit">Send Message</button>
@@ -82,6 +82,7 @@
             </form>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         window.addEventListener("scroll" , function() {
             let header = document.querySelector("section")
@@ -95,7 +96,7 @@
             let inp2 = document.getElementById('inp2')
             let inp3 = document.getElementById('inp3')
             let inp4 = document.getElementById('inp4')
-            fetch(`https://api.telegram.org/bot5640356633:AAEbyQ0brt-QRc6NNC_QjwJLmLtAWG0vS6M/sendMessage?chat_id=-1001734137316&text=name ${inp1.value} surname ${inp2.value} subject ${inp3.value} message ${inp4.value}` , {
+            fetch(`https://api.telegram.org/bot5640356633:AAEbyQ0brt-QRc6NNC_QjwJLmLtAWG0vS6M/sendMessage?chat_id=-1001734137316&text=name ${inp1.value} surname ${inp2.value} mavzu ${inp3.value} message ${inp4.value}` , {
                 method: 'GET'
             })
             .then( success => {
@@ -113,6 +114,38 @@
                 theme.href = 'send.css';
             }
         }
+        var typed = new Typed('.typed', {
+            strings: ['Ismingizni yozing', 'Ilhomov Muhammadjon', 'Endi Esa siz yozing'],
+            typeSpeed: 70,
+            backSpeed: 30,
+            attr: 'placeholder',
+            bindInputFocusEvents: true,
+            loop: true
+        }); 
+        var typed2 = new Typed('.e2', {
+            strings: ['Emailingizni yozing', 'imuhammadjon555@gmail.com', 'Endi Esa siz yozing'],
+            typeSpeed: 70,
+            backSpeed: 30,
+            attr: 'placeholder',
+            bindInputFocusEvents: true,
+            loop: true
+        }); 
+        var typed3 = new Typed('.g1', {
+            strings: ['Mavzuingizni yozing', 'Men portfolio tuzmoqchiman', 'Endi Esa siz yozing'],
+            typeSpeed: 70,
+            backSpeed: 30,
+            attr: 'placeholder',
+            bindInputFocusEvents: true,
+            loop: true
+        });
+        var typed4 = new Typed('.m2', {
+            strings: ['Izohingizni yozing', 'Men Mazza qildim', 'Endi Esa siz yozing'],
+            typeSpeed: 70,
+            backSpeed: 30,
+            attr: 'placeholder',
+            bindInputFocusEvents: true,
+            loop: true
+        });
     </script>
 </body>
 </html>

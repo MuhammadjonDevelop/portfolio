@@ -7,7 +7,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css"> -->
-    <link rel="stylesheet" id="theme" href="portfolio.css">
+    <link rel="stylesheet" id="bosh" href="portfolio.css">
     <link rel="icon" href="./img/teamit clone.jpg">
     <title>Portfolio Websites</title>
 </head>
@@ -18,14 +18,18 @@
     </div>
     <section>
         <a href="#" class="logo">Portfo<span>lio</span></a>
-        <div class="toggle"></div> 
-        <ul>
+        <label for="theme" class="theme">
+            <span class="theme__toggle-wrap">
+                <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme">
+        </label>
+        <ul class="menu">
             <li><a href="./index.html">Home</a></li>
             <li><a href="./portfolio.html">Portfolio</a></li>
             <li><a href="./aboutme.html">About me</a></li>
             <li><a href="./send.html">Send Question</a></li>
-            <input type="checkbox" name="" id="ch">
+            <!-- <li><i style="border: 1px solid red; color: white;" id="icon" class="bi bi-brightness-high"></i></li> -->
         </ul>
+        <div class="toggle"  onclick="toggleMenu()"></div>
     </section>
     <div class="container">
         <div class="scrollbtn">
@@ -217,27 +221,25 @@
             let header = document.querySelector("section")
             header.classList.toggle("sticky" , window.scrollY > 0)
         })
-        let check = document.getElementById("ch")
+        let check = document.querySelector(".theme__toggle")
         check.onclick = function() {
-            let theme = document.getElementById('theme')
+            let theme = document.getElementById('bosh')
             if (theme.getAttribute('href') == 'portfolio.css') {
                 theme.href = 'oq.css';
             }else {
                 theme.href = 'portfolio.css';
             }
         }
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle')
+            var menu = document.querySelector('.menu')
+            menuToggle.classList.toggle('active')
+            menu.classList.toggle('menus')
+        }
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <!-- <script src="https://unpkg.com/kursor"></script>
-    <script>
-        new kursor({
-            type: 1,
-            removeDefaultCursor: true,
-            color: 'rgb(0, 255, 60)',
-        })
-    </script> -->
 </body>
 </html>
